@@ -11,13 +11,13 @@ const config: Config = {
       colors: {
         background: "#FAF9F5",
         foreground: "#141413",
-        accent: "#D97757",
-        "accent-hover": "#C26644",
+        accent: "#2D6A4F",
+        "accent-hover": "#1B4332",
         muted: "#B0AEA5",
         border: "#E8E6DC",
         success: "#788C5D",
         card: "#FFFFFF",
-        "accent-light": "#FEF3EE",
+        "accent-light": "#E8F3EC",
       },
       fontFamily: {
         inter: ["var(--font-inter)", "sans-serif"],

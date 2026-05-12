@@ -47,8 +47,8 @@ const playfairDisplay = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "SuperPower for your Business — Pre-Webinar Survey",
-  description: "Tell us about your business so we can tailor the AI webinar for you. April 2026.",
+  title: "Mundhe Banni Forum — Pre-Launch Survey",
+  description: "Help us build the Mundhe Banni Forum the right way. ಮುಂದಿನ ಹೆಜ್ಜೆ ನಿಮ್ಮಿಂದ.",
 };
 
 export default function RootLayout({

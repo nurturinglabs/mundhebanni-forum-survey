@@ -15,18 +15,31 @@
 
 # production
 /build
+/dist
 
 # misc
 .DS_Store
+Thumbs.db
 *.pem
+*.key
+*.cert
+*.crt
 
-# debug
+# debug / logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+*.log
+.eslintcache
 
-# local env files
-.env*.local
+# local env files (block ALL .env variants — only allow *.example)
+.env
+.env.*
+!.env.example
+!.env.local.example
+!.env*.example
 
 # vercel
 .vercel
@@ -34,3 +47,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# IDE / editor
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.history/
