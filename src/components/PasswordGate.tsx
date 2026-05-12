@@ -39,45 +39,47 @@ export default function PasswordGate({ onAuthenticated }: PasswordGateProps) {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center px-4" style={{ backgroundColor: "#F5F0E8" }}>
-      <div className="w-full max-w-sm">
-        <div className="bg-white border border-[#E8E0D0] rounded-xl p-8 text-center">
-          <svg
-            className="mx-auto mb-4"
-            style={{ color: "#8C8579" }}
-            width="40"
-            height="40"
-            viewBox="0 0 24 24"
-            fill="none"
-            xmlns="http://www.w3.org/2000/svg"
+    <div
+      className="min-h-screen w-screen dot-grid flex items-center justify-center px-4"
+      style={{ backgroundColor: "#FAF9F5" }}
+    >
+      <div className="relative z-10 w-full max-w-sm">
+        <div className="bg-white border border-[#E8E6DC] rounded-xl p-8 text-center">
+          <div
+            className="mx-auto mb-4 w-12 h-12 rounded-full flex items-center justify-center"
+            style={{ backgroundColor: "#E8F3EC", color: "#2D6A4F" }}
           >
-            <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" strokeWidth="2" />
-            <path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-          </svg>
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+              <rect x="3" y="11" width="18" height="11" rx="2" />
+              <path d="M7 11V7a5 5 0 0110 0v4" />
+            </svg>
+          </div>
 
-          <h2 className="font-outfit font-semibold text-xl mb-6" style={{ color: "#1A1714" }}>
-            Dashboard Access
+          <h2 className="font-outfit font-semibold text-xl mb-1 text-[#141413]">
+            Admin Access
           </h2>
+          <p className="text-xs text-[#B0AEA5] mb-6">
+            Mundhe Banni Forum · <span className="font-kannada">ಮುಂದೆ ಬನ್ನಿ</span>
+          </p>
 
-          <form onSubmit={handleSubmit} className="space-y-4">
+          <form onSubmit={handleSubmit} className="space-y-3">
             <input
               type="password"
               placeholder="Enter password"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
-              className="w-full h-12 border border-[#E8E0D0] rounded-lg px-4 text-sm bg-white focus:border-[#D97757] focus:outline-none focus:ring-1 focus:ring-[#D97757]"
-              style={{ color: "#1A1714" }}
+              autoFocus
+              className="w-full h-12 border border-[#E8E6DC] rounded-lg px-4 text-sm bg-white focus:border-[#2D6A4F] focus:outline-none focus:ring-1 focus:ring-[#2D6A4F] text-[#141413]"
             />
 
-            {error && <p className="text-red-600 text-sm">{error}</p>}
+            {error && <p className="text-red-600 text-xs">{error}</p>}
 
             <button
               type="submit"
               disabled={loading}
-              className="w-full h-12 text-white font-semibold rounded-lg transition-colors disabled:opacity-60"
-              style={{ backgroundColor: "#D97757" }}
+              className="w-full h-12 text-white font-semibold rounded-lg transition-colors disabled:opacity-60 bg-[#2D6A4F] hover:bg-[#1B4332]"
             >
-              {loading ? "Checking..." : "Enter"}
+              {loading ? "Checking…" : "Enter"}
             </button>
           </form>
         </div>

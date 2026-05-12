@@ -40,9 +40,14 @@ Create `.env.local`:
 ```env
 NEXT_PUBLIC_SUPABASE_URL=https://YOUR-PROJECT.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR-ANON-KEY
+
+# /admin dashboard password
+DASHBOARD_PASSWORD=pick-a-strong-password
 ```
 
 Use the **same Supabase project as the original Mundhe Banni survey app** (just add the new table below).
+
+`DASHBOARD_PASSWORD` is server-side only (no `NEXT_PUBLIC_` prefix). Set it in Vercel → Environment Variables for the deployed version. Without it, `/admin` returns a 500.
 
 ---
 
@@ -147,12 +152,31 @@ src/
     page.tsx                      → KFF survey landing
     layout.tsx                    → metadata + fonts
     thank-you/page.tsx            → submit-to-unlock confirmation
+    admin/page.tsx                → password-gated dashboard
     api/kff-survey/route.ts       → POST → Supabase insert
+    api/auth/route.ts             → POST → checks DASHBOARD_PASSWORD
   components/
     KFFSurveyForm.tsx             → multi-step 6-section form
+    KFFDashboard.tsx              → admin dashboard (charts + table + drawer)
+    PasswordGate.tsx              → password screen for /admin
+    LangToggle.tsx                → EN | ಕನ್ನಡ toggle
   lib/
     supabase.ts                   → shared Supabase client
+    copy.ts                       → bilingual EN/KN dictionary
 ```
+
+## Admin dashboard
+
+Visit `/admin`. Enter `DASHBOARD_PASSWORD`. Session is held in `sessionStorage('dash_auth')`.
+
+What you get:
+- Persona filter (All / EF / SC / AF / SP / MI) — re-scopes every chart.
+- KPI strip: total · today · decision-makers (SC+MI) · NPS proxy from Q12.
+- Persona donut, NPS distribution, Q5 limiting-factor averages, Q4/Q6 challenge & wish bars, Q2/Q3 location & stage, Q7/Q9/Q14 single-selects, Q10/Q11/Q13/Q15/Q19 multi-selects.
+- Open-text panel: Q17 missing + Q18 best community, newest first, with persona + city.
+- Sortable response table — click any row for a per-respondent drawer.
+- CSV export of the currently filtered view.
+- Auto-refresh every 60 seconds.
 
 (Legacy webinar-survey routes from the original Mundhe Banni app remain in the repo — `/pre`, `/dashboard*`, `/prompts`, `/api/post-survey` — but are unlinked from the new flow. Delete if you don't need them.)
 
