@@ -68,7 +68,7 @@ export default function ThankYouPage() {
               <span className="text-[#2D6A4F] mt-1">●</span>
               <div>
                 <p className="text-sm font-semibold text-[#141413]">
-                  Direct line to the people building KFF
+                  Direct line to the people building the survey app
                 </p>
                 <p className="text-xs text-[#5A5A55]">
                   Your responses go straight into v1 — no committee in between
