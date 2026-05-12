@@ -92,7 +92,7 @@ export default function KFFSurveyForm() {
     if (section === 0) {
       if (!name.trim()) return text(e.name, lang);
       if (!city.trim()) return text(e.city, lang);
-      if (!email.trim() || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email))
+      if (email.trim() && !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email.trim()))
         return text(e.email, lang);
       if (!phone.trim() || phone.replace(/\D/g, "").length < 7)
         return text(e.phone, lang);
@@ -313,7 +313,12 @@ export default function KFFSurveyForm() {
                 />
               </div>
               <div>
-                <label className={`${labelClass} ${knBody}`}>{text(COPY.contact.email, lang)}</label>
+                <label className={`${labelClass} ${knBody}`}>
+                  {text(COPY.contact.email, lang)}
+                  <span className={`ml-1.5 text-[10px] font-normal text-[#B0AEA5] ${knBody}`}>
+                    ({text(COPY.contact.emailHint, lang)})
+                  </span>
+                </label>
                 <input
                   type="email"
                   value={email}

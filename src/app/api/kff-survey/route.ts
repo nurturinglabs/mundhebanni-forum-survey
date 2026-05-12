@@ -33,9 +33,9 @@ export async function POST(request: NextRequest) {
       q19,
     } = body;
 
-    if (!name || !city || !email || !phone || !persona) {
+    if (!name || !city || !phone || !persona) {
       return NextResponse.json(
-        { error: "Name, city, email, phone, and persona are required" },
+        { error: "Name, city, phone, and persona are required" },
         { status: 400 }
       );
     }
@@ -44,7 +44,7 @@ export async function POST(request: NextRequest) {
       {
         name,
         city,
-        email,
+        email: email || "",
         phone,
         persona,
         q1: q1 || persona,
