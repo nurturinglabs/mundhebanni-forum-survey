@@ -8,10 +8,7 @@ export default function Home() {
       {/* Left panel — branding */}
       <div className="relative z-10 hidden lg:flex flex-col justify-between w-[380px] shrink-0 bg-[#0E2A1F] text-white p-8">
         <div>
-          <span className="inline-block bg-[#2D6A4F] text-white rounded-full px-3 py-1 text-xs font-medium mb-6">
-            Pre-launch · Founding Members
-          </span>
-          <h1 className="font-outfit font-extrabold text-[32px] leading-tight mb-3">
+          <h1 className="font-outfit font-extrabold text-[32px] leading-tight mb-3 mt-2">
             Mundhe Banni Forum
           </h1>
           <p className="text-sm text-white/55 mb-2">

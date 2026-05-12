@@ -434,7 +434,7 @@ export default function KFFSurveyForm() {
     }`;
 
   const scaleBtn = (active: boolean) =>
-    `h-9 w-9 rounded-md text-sm font-semibold border transition-colors ${
+    `h-11 w-11 rounded-md text-sm font-semibold border transition-colors ${
       active
         ? "border-[#2D6A4F] bg-[#2D6A4F] text-white"
         : "border-[#E0DDD8] bg-white text-[#141413] hover:border-[#2D6A4F]"
