@@ -248,7 +248,7 @@ export const COPY = {
           "Runway ಮತ್ತು burn rate manage ಮಾಡುವುದು"
         ),
         o("Loneliness of building alone", "ಒಬ್ಬರೇ ಎಲ್ಲದನ್ನೂ ನಿಭಾಯಿಸುವ ಒತ್ತಡ"),
-        o("Not knowing what I don't know", "ನಂಗೇನ್ ಗೊತ್ತಿಲ್ಲ ಅಂತ ನನಗೇ ಗೊತ್ತಿಲ್ಲ"),
+        o("Not knowing what I don't know", "ನನಗೇ ಗೊತ್ತಿಲ್ಲ"),
         o("Other", "ಇತರೆ"),
       ],
       AF: [
@@ -267,7 +267,7 @@ export const COPY = {
           "Runway ಮತ್ತು burn rate manage ಮಾಡುವುದು"
         ),
         o("Loneliness of building alone", "ಒಬ್ಬರೇ ಎಲ್ಲದನ್ನೂ ನಿಭಾಯಿಸುವ ಒತ್ತಡ"),
-        o("Not knowing what I don't know", "ನಂಗೇನ್ ಗೊತ್ತಿಲ್ಲ ಅಂತ ನನಗೇ ಗೊತ್ತಿಲ್ಲ"),
+        o("Not knowing what I don't know", "ನನಗೇ ಗೊತ್ತಿಲ್ಲ"),
         o("Other", "ಇತರೆ"),
       ],
       SC: [
@@ -371,35 +371,35 @@ export const COPY = {
     options: [
       o(
         "Make warm introductions to people I cannot reach on my own",
-        "ನಾನು reach ಮಾಡಲಾಗದ ಜನರಿಗೆ warm introductions ಮಾಡಿಸುವುದು"
+        "ನಾನು reach ಮಾಡಲಾಗದ ಜನರಿಗೆ warm introductions ಕೊಡಿಸುವುದು"
       ),
       o(
         "Give me honest, brutal feedback on my business",
-        "ನನ್ನ business ಬಗ್ಗೆ ಪ್ರಾಮಾಣಿಕ, ನೇರ feedback ಕೊಡುವುದು"
+        "ನನ್ನ business ಬಗ್ಗೆ ಪ್ರಾಮಾಣಿಕ, ನೇರವಾದ feedback ಕೊಡುವುದು"
       ),
       o(
         "Help me find my next hire or co-founder",
-        "ಮುಂದಿನ hire ಅಥವಾ co-founder ಹುಡುಕಲು ಸಹಾಯ"
+        "ಮುಂದಿನ hire ಅಥವಾ co-founder ಹುಡುಕಲು ಸಹಾಯ ಮಾಡುವುದು"
       ),
       o(
         "Connect me with investors genuinely interested in KA companies",
-        "KA companies ಬಗ್ಗೆ ಆಸಕ್ತಿ ಇರೋ investors ಜೊತೆ connect"
+        "ಕರ್ನಾಟಕದ ಕಂಪನಿಗಳ ಬಗ್ಗೆ ಆಸಕ್ತಿ ಇರೋ investors ಜೊತೆ ಸಂಪರ್ಕ ಮಾಡಿಸುವುದು"
       ),
       o(
         "Give me a safe space to talk about the hard parts of building",
-        "Build ಮಾಡೋ ಕಷ್ಟದ ಭಾಗಗಳ ಬಗ್ಗೆ ಮಾತಾಡಲು safe space"
+        "ಕಂಪನಿ ಕಟ್ಟುವ ಕಷ್ಟಗಳನ್ನು ಹೇಳಿಕೊಳ್ಳಲು ಒಂದು ನಂಬಿಕೆಗೆ ಅರ್ಹವಾದ ಸ್ಪೇಸ್ ಸೃಷ್ಟಿಸುವುದು"
       ),
       o(
         "Keep me updated on what is actually happening in the KA ecosystem",
-        "KA ecosystem ನಲ್ಲಿ ನಿಜವಾಗಿ ಏನು ಆಗ್ತಿದೆ ಎಂದು update ಇಡುವುದು"
+        "ಕರ್ನಾಟಕದ ಉದ್ಯಮಲೋಕದಲ್ಲಿ ನಿಜವಾಗಿ ಏನು ಆಗ್ತಿದೆ ಎಂದು ತಿಳಿಸುವುದು"
       ),
       o(
         "Help me find early customers or strategic partnerships",
-        "Early customers ಅಥವಾ strategic partnerships ಹುಡುಕಲು ಸಹಾಯ"
+        "Early customers ಅಥವಾ strategic partnerships ಹುಡುಕಲು ಸಹಾಯ ಮಾಡುವುದು"
       ),
       o(
         "Give me access to legal, CA, or operational expertise on demand",
-        "Legal, CA, ಅಥವಾ operational expertise ಗೆ on-demand access"
+        "Legal, CA, ಅಥವಾ operational expertise ಗೆ on-demand access ಕೊಡಿಸುವುದು"
       ),
     ],
   },
@@ -412,19 +412,19 @@ export const COPY = {
     options: [
       o(
         "A dedicated platform — organised by topic",
-        "Topic ಪ್ರಕಾರ organise ಆದ dedicated platform"
+        "ಬೇರೆ ಬೇರೆ ವಿಷಯಗಳ ಸುತ್ತ ಕಟ್ಟಲಾದ ಒಂದು ಪ್ಲಾಟ್‌ಫಾರ್ಮ್ ನಲ್ಲಿ ಚರ್ಚಿಸುವುದು"
       ),
       o(
         "Monthly in-person events only — I don't want an online presence",
-        "Monthly in-person events ಮಾತ್ರ — online presence ಬೇಡ"
+        "ತಿಂಗಳಿಗೊಮ್ಮೆ ಭೇಟಿಯಾಗುವ ಮೀಟ್‌ಅಪ್ಸ್ ಅಲ್ಲಿ ಸಿಗುವ ಮೂಲಕ"
       ),
       o(
         "Weekly curated newsletter — I read, I don't post",
-        "Weekly curated newsletter — ಓದ್ತೀನಿ, post ಮಾಡಲ್ಲ"
+        "ವಾರಕ್ಕೊಮ್ಮೆ ಸಮಗ್ರ ಮಾಹಿತಿಯುಳ್ಳ ನ್ಯೂಸ್ ಲೆಟರ್ ಮೂಲಕ"
       ),
       o(
         "A mix — online async + monthly in-person",
-        "Mix — online async + monthly in-person"
+        "ನೇರವಾಗಿ ಭೇಟಿ ಮತ್ತು ಆನ್ ಲೈನ್ ಎರಡರ ಮೂಲಕ"
       ),
     ],
   },
@@ -476,13 +476,13 @@ export const COPY = {
   q9: {
     prompt: { en: "Membership — what would you pay? *", kn: "Membership — ಎಷ್ಟು ಕೊಡ್ತೀರಿ? *" },
     options: [
-      o("Won't pay", "ಕೊಡಲ್ಲ"),
-      o("Up to Rs.200/month", "ತಿಂಗಳಿಗೆ Rs.200 ತನಕ"),
-      o("Up to Rs.500/month", "ತಿಂಗಳಿಗೆ Rs.500 ತನಕ"),
-      o("Up to Rs.2,000/month", "ತಿಂಗಳಿಗೆ Rs.2,000 ತನಕ"),
+      o("Won't pay", "ನನಗೆ ಎಲ್ಲ ಉಚಿತ ಬೇಕು"),
+      o("Up to Rs.200/month", "ತಿಂಗಳಿಗೆ Rs.200 ತನಕ ನನಗೆ ಓಕೆ"),
+      o("Up to Rs.500/month", "ತಿಂಗಳಿಗೆ Rs.500 ತನಕ ಆಗಬಹುದು"),
+      o("Up to Rs.2,000/month", "ತಿಂಗಳಿಗೆ Rs.2,000 ತನಕ ಇದ್ರೂ ಓಕೆ"),
       o(
         "Rs.5,000+/month if ROI is clear",
-        "ROI clear ಇದ್ರೆ ತಿಂಗಳಿಗೆ Rs.5,000+"
+        "ROI clear ಇದ್ರೆ ತಿಂಗಳಿಗೆ Rs.5,000+ ಆದ್ರೂ ಓಕೆ"
       ),
     ],
   },
