@@ -62,8 +62,7 @@ export const COPY = {
     fullNamePh: { en: "e.g. Anitha R.", kn: "ಉದಾ. ಅನಿತಾ ಆರ್." },
     city: { en: "City *", kn: "ನಗರ *" },
     cityPh: { en: "e.g. Bengaluru", kn: "ಉದಾ. Bengaluru" },
-    email: { en: "Email", kn: "Email" },
-    emailHint: { en: "optional", kn: "ಐಚ್ಛಿಕ" },
+    email: { en: "Email *", kn: "Email *" },
     emailPh: { en: "name@email.com", kn: "name@email.com" },
     phone: { en: "Phone *", kn: "Phone *" },
     phoneSub: { en: "WhatsApp number preferred", kn: "WhatsApp number ಸೂಕ್ತ" },
@@ -73,10 +72,7 @@ export const COPY = {
   errors: {
     name: { en: "Please enter your full name.", kn: "ನಿಮ್ಮ ಪೂರ್ಣ ಹೆಸರು ನಮೂದಿಸಿ." },
     city: { en: "Please enter your city.", kn: "ನಿಮ್ಮ ನಗರ ನಮೂದಿಸಿ." },
-    email: {
-      en: "That email doesn't look right — leave it blank if you'd rather skip.",
-      kn: "Email ಸರಿ ಇಲ್ಲ — ಬೇಡ ಅಂದ್ರೆ blank ಬಿಡಿ.",
-    },
+    email: { en: "Please enter a valid email.", kn: "ಸರಿಯಾದ email ನಮೂದಿಸಿ." },
     phone: {
       en: "Please enter a valid phone number.",
       kn: "ಸರಿಯಾದ phone ನಂಬರ್ ನಮೂದಿಸಿ.",
