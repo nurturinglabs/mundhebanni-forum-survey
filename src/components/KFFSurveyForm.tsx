@@ -816,26 +816,21 @@ export default function KFFSurveyForm() {
                 <Pill>Q19</Pill>
                 <label className={sectionH}>{text(COPY.q19.prompt, lang)}</label>
               </div>
-              <p className={helperText}>
-                {text(c.pickTop3, lang)}
-                <span className="ml-1 font-semibold">({q19.length}/3)</span>
+              <p className={`${helperText} font-kannada`}>
+                ನಿಮಗೆ ಬೇಕಾದಷ್ಟು select ಮಾಡಿ · <span className="font-inter">Select all that apply</span>
+                <span className="ml-1 font-semibold font-inter">({q19.length})</span>
               </p>
               <div className="flex flex-wrap gap-2">
-                {COPY.q19.options.map((opt) => {
-                  const selected = q19.includes(opt.value);
-                  const disabled = !selected && q19.length >= 3;
-                  return (
-                    <button
-                      key={opt.value}
-                      type="button"
-                      disabled={disabled}
-                      onClick={() => togglePick(opt.value, q19, setQ19, 3)}
-                      className={chipDisabled(selected, disabled)}
-                    >
-                      {optText(opt, lang)}
-                    </button>
-                  );
-                })}
+                {COPY.q19.options.map((opt) => (
+                  <button
+                    key={opt.value}
+                    type="button"
+                    onClick={() => togglePick(opt.value, q19, setQ19)}
+                    className={chip(q19.includes(opt.value))}
+                  >
+                    {optText(opt, lang)}
+                  </button>
+                ))}
               </div>
             </div>
           </>

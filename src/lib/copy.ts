@@ -137,7 +137,7 @@ export const COPY = {
       en: "Please describe your best community experience.",
       kn: "ನಿಮ್ಮ ಅತ್ಯುತ್ತಮ community experience describe ಮಾಡಿ.",
     },
-    q19: { en: "Pick up to 3.", kn: "3 ತನಕ ಆಯ್ಕೆ ಮಾಡಿ." },
+    q19: { en: "Pick at least one.", kn: "ಕನಿಷ್ಠ ಒಂದು ಆಯ್ಕೆ ಮಾಡಿ." },
   },
 
   // Q1 — Persona selector
@@ -235,39 +235,39 @@ export const COPY = {
       EF: [
         o(
           "Finding first 10 paying customers",
-          "ಮೊದಲ 10 paying customers ಸಿಗಿಸುವುದು"
+          "ಮೊದಲ 10 paying customers ಪಡೆಯುವುದು"
         ),
-        o("Honest feedback on product", "Product ಬಗ್ಗೆ ಪ್ರಾಮಾಣಿಕ feedback"),
+        o("Honest feedback on product", "Product ಬಗ್ಗೆ ಪ್ರಾಮಾಣಿಕ feedback ಪಡೆಯುವುದು"),
         o(
           "Finding co-founder or early team",
-          "Co-founder ಅಥವಾ early team ಸಿಗಿಸುವುದು"
+          "Co-founder ಅಥವಾ early team ಪಡೆಯುವುದು"
         ),
-        o("Raising first round", "ಮೊದಲ round funding ಎತ್ತುವುದು"),
+        o("Raising first round", "ಮೊದಲ round funding ಪಡೆಯುವುದು"),
         o(
           "Managing runway and burn rate",
           "Runway ಮತ್ತು burn rate manage ಮಾಡುವುದು"
         ),
-        o("Loneliness of building alone", "ಒಂಟಿಯಾಗಿ build ಮಾಡುವ ಒಂಟಿತನ"),
-        o("Not knowing what I don't know", "ಏನು ಗೊತ್ತಿಲ್ಲ ಎಂದು ಗೊತ್ತಿಲ್ಲ"),
+        o("Loneliness of building alone", "ಒಬ್ಬರೇ ಎಲ್ಲದನ್ನೂ ನಿಭಾಯಿಸುವ ಒತ್ತಡ"),
+        o("Not knowing what I don't know", "ನಂಗೇನ್ ಗೊತ್ತಿಲ್ಲ ಅಂತ ನನಗೇ ಗೊತ್ತಿಲ್ಲ"),
         o("Other", "ಇತರೆ"),
       ],
       AF: [
         o(
           "Finding first 10 paying customers",
-          "ಮೊದಲ 10 paying customers ಸಿಗಿಸುವುದು"
+          "ಮೊದಲ 10 paying customers ಪಡೆಯುವುದು"
         ),
-        o("Honest feedback on product", "Product ಬಗ್ಗೆ ಪ್ರಾಮಾಣಿಕ feedback"),
+        o("Honest feedback on product", "Product ಬಗ್ಗೆ ಪ್ರಾಮಾಣಿಕ feedback ಪಡೆಯುವುದು"),
         o(
           "Finding co-founder or early team",
-          "Co-founder ಅಥವಾ early team ಸಿಗಿಸುವುದು"
+          "Co-founder ಅಥವಾ early team ಪಡೆಯುವುದು"
         ),
-        o("Raising first round", "ಮೊದಲ round funding ಎತ್ತುವುದು"),
+        o("Raising first round", "ಮೊದಲ round funding ಪಡೆಯುವುದು"),
         o(
           "Managing runway and burn rate",
           "Runway ಮತ್ತು burn rate manage ಮಾಡುವುದು"
         ),
-        o("Loneliness of building alone", "ಒಂಟಿಯಾಗಿ build ಮಾಡುವ ಒಂಟಿತನ"),
-        o("Not knowing what I don't know", "ಏನು ಗೊತ್ತಿಲ್ಲ ಎಂದು ಗೊತ್ತಿಲ್ಲ"),
+        o("Loneliness of building alone", "ಒಬ್ಬರೇ ಎಲ್ಲದನ್ನೂ ನಿಭಾಯಿಸುವ ಒತ್ತಡ"),
+        o("Not knowing what I don't know", "ನಂಗೇನ್ ಗೊತ್ತಿಲ್ಲ ಅಂತ ನನಗೇ ಗೊತ್ತಿಲ್ಲ"),
         o("Other", "ಇತರೆ"),
       ],
       SC: [
@@ -342,7 +342,7 @@ export const COPY = {
   q5: {
     prompt: {
       en: "How much do these factors limit your progress? *",
-      kn: "ಈ factors ನಿಮ್ಮ progress ಯನ್ನು ಎಷ್ಟು ತಡೆಯುತ್ತವೆ? *",
+      kn: "ಈ ಕೆಳಗಿನವುಗಳಲ್ಲಿ ಯಾವುದು, ಎಷ್ಟರ ಮಟ್ಟಿಗೆ ನಿಮ್ಮನ್ನು ತಡೆಯುತ್ತಿದೆ? *",
     },
     helper: {
       en: "1 = not at all · 3 = moderately · 5 = severely limits progress",
@@ -350,15 +350,15 @@ export const COPY = {
     },
     factors: [
       o("Lack of right connections", "ಸರಿಯಾದ connections ಇಲ್ಲದಿರುವುದು"),
-      o("Not knowing where to find advice", "Advice ಎಲ್ಲಿ ಸಿಗ್ತದೆ ಎಂದು ಗೊತ್ತಿಲ್ಲ"),
-      o("Feeling isolated as founder", "Founder ಆಗಿ ಒಂಟಿಯಾಗಿರೋ ಭಾವನೆ"),
+      o("Not knowing where to find advice", "ಸಲಹೆ ಎಲ್ಲಿ ಪಡೆಯಬೇಕು ಅಂತ ಗೊತ್ತಾಗದಿರುವುದು"),
+      o("Feeling isolated as founder", "ಎಲ್ಲದನ್ನೂ ಒಬ್ಬರೇ ಮಾಡುವಾಗ ಕಾಡುವ ಒಂಟಿತನ"),
       o(
         "Limited access to capital / investors",
-        "Capital / investors ಗೆ ಸೀಮಿತ access"
+        "ಹೂಡಿಕೆ ಮಾಡುವವರ ಸಂಪರ್ಕ ಇಲ್ಲದಿರುವುದು"
       ),
       o(
         "Weak local startup support infrastructure",
-        "ದುರ್ಬಲ local startup support infrastructure"
+        "ಸ್ಥಳೀಯವಾಗಿ ನಮ್ಮನ್ನು ಬೆಂಬಲಿಸುವ ವ್ಯವಸ್ಥೆ ಇಲ್ಲದಿರುವುದು"
       ),
     ],
   },
@@ -554,7 +554,7 @@ export const COPY = {
   q12: {
     prompt: {
       en: "How likely are you to recommend a community you love? *",
-      kn: "ನೀವು ಇಷ್ಟಪಟ್ಟ community ಯನ್ನು recommend ಮಾಡೋ likelihood ಎಷ್ಟು? *",
+      kn: "ನಿಮಗೆ ಒಂದು ಕಮ್ಯೂನಿಟಿ ಇಷ್ಟ ಆದರೆ ಅದನ್ನು ಬೇರೆಯವರಿಗೆ ನೀವು ರೆಕಮಂಡ್ ಮಾಡುವ ಸಾಧ್ಯತೆ ಎಷ್ಟು? *",
     },
     helper: {
       en: "1 = not at all likely · 10 = extremely likely",
@@ -589,7 +589,7 @@ export const COPY = {
       o("Once a month", "ತಿಂಗಳಿಗೊಮ್ಮೆ"),
       o("Once a quarter", "3 ತಿಂಗಳಿಗೊಮ್ಮೆ"),
       o("Only flagship events", "Flagship events ಮಾತ್ರ"),
-      o("Rarely — prefer async", "ಅಪರೂಪವಾಗಿ — async ಬೇಕು"),
+      o("Rarely — prefer async", "ಅಪರೂಪಕ್ಕೊಮ್ಮೆ ಓಕೆ"),
     ],
   },
 
@@ -636,7 +636,7 @@ export const COPY = {
   q17: {
     prompt: {
       en: "What is the one thing Karnataka's startup ecosystem is genuinely missing? *",
-      kn: "Karnataka startup ecosystem ಗೆ ನಿಜವಾಗಿ ಸಿಗದ ಒಂದು ವಿಷಯ ಯಾವುದು? *",
+      kn: "ಕರ್ನಾಟಕದ ಉದ್ಯಮದ ಇಕೋಸಿಸ್ಟಂ ಅಲ್ಲಿ ಇವತ್ತು ನಿಮಗೆ ನಿಜಕ್ಕೂ ಸಿಗದ ವಿಷಯ ಯಾವುದು? *",
     },
     sub: {
       en: "Something no existing community or program is solving.",
