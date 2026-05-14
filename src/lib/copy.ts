@@ -707,16 +707,6 @@ export const COPY = {
           kn: "ನೀವು ಕೊಟ್ಟ number ಗೆ ನಾವು ತಲುಪುತ್ತೇವೆ.",
         },
       },
-      {
-        title: {
-          en: "First look at the “State of Munde Banni” report",
-          kn: "“State of Munde Banni” report ನ ಮೊದಲ ನೋಟ",
-        },
-        detail: {
-          en: "Built from these responses · exclusive to founding members",
-          kn: "ಈ responses ಂದ ತಯಾರಾಗಿರೋ report · founding members ಗೆ ಮಾತ್ರ",
-        },
-      },
     ],
     footerBy: { en: "By Mundhe Banni", kn: "Mundhe Banni ಂದ" },
     refer: { en: "Refer another founder →", kn: "ಇನ್ನೊಬ್ಬ founder ಗೆ refer →" },
