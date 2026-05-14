@@ -13,7 +13,6 @@ import {
   Tooltip,
   LabelList,
 } from "recharts";
-import { supabase } from "@/lib/supabase";
 
 type Persona = "EF" | "SC" | "AF" | "SP" | "MI";
 
@@ -468,17 +467,26 @@ export default function KFFDashboard() {
   const load = useCallback(async () => {
     try {
       setError("");
-      const { data, error: err } = await supabase
-        .from("kff_survey_responses")
-        .select("*")
-        .order("created_at", { ascending: false });
-      if (err) throw err;
-      setRows((data || []) as KFFResponse[]);
+      const res = await fetch("/api/admin/responses", {
+        credentials: "same-origin",
+      });
+      if (res.status === 401) {
+        sessionStorage.removeItem("dash_auth");
+        if (typeof window !== "undefined") window.location.reload();
+        return;
+      }
+      if (!res.ok) {
+        const body = await res.json().catch(() => ({}));
+        throw new Error(body.error || `HTTP ${res.status}`);
+      }
+      const { data } = (await res.json()) as { data: KFFResponse[] };
+      setRows(data || []);
       setUpdatedAt(new Date());
     } catch (e) {
       console.error(e);
+      const msg = e instanceof Error ? e.message : String(e);
       setError(
-        "Failed to load responses. Check Supabase env vars + RLS policy."
+        `Failed to load responses: ${msg}. Check SUPABASE_SERVICE_ROLE_KEY + DASHBOARD_PASSWORD env vars.`
       );
     } finally {
       setLoading(false);

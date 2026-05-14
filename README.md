@@ -41,13 +41,16 @@ Create `.env.local`:
 NEXT_PUBLIC_SUPABASE_URL=https://YOUR-PROJECT.supabase.co
 NEXT_PUBLIC_SUPABASE_ANON_KEY=YOUR-ANON-KEY
 
-# /admin dashboard password
+# /admin dashboard password (server-side only)
 DASHBOARD_PASSWORD=pick-a-strong-password
+
+# Supabase service role key — server-side only, bypasses RLS for admin reads
+SUPABASE_SERVICE_ROLE_KEY=YOUR-SERVICE-ROLE-KEY
 ```
 
 Use the **same Supabase project as the original Mundhe Banni survey app** (just add the new table below).
 
-`DASHBOARD_PASSWORD` is server-side only (no `NEXT_PUBLIC_` prefix). Set it in Vercel → Environment Variables for the deployed version. Without it, `/admin` returns a 500.
+`DASHBOARD_PASSWORD` and `SUPABASE_SERVICE_ROLE_KEY` are both server-side only (no `NEXT_PUBLIC_` prefix). Set them in Vercel → Environment Variables for the deployed version. The admin route reads responses via the service role on the server, so RLS only needs an `INSERT` policy for `anon` — read access never leaks to the client.
 
 ---
 
@@ -167,7 +170,7 @@ src/
 
 ## Admin dashboard
 
-Visit `/admin`. Enter `DASHBOARD_PASSWORD`. Session is held in `sessionStorage('dash_auth')`.
+Visit `/admin`. Enter `DASHBOARD_PASSWORD`. On success the server sets an HttpOnly cookie (`dash_auth`, 12-hour TTL) and the dashboard fetches responses via `/api/admin/responses`, which validates the cookie and reads Supabase using the **service role** key (server-side only). RLS stays locked down — the public anon key never sees the data.
 
 What you get:
 - Persona filter (All / EF / SC / AF / SP / MI) — re-scopes every chart.
